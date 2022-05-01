@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.link-header {
+  @apply text-base font-normal text-white
+    transition-all  hover:font-medium;
+}
