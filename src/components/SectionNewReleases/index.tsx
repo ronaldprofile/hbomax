@@ -41,7 +41,7 @@ const moviesReleasesData = {
 export function SectionNewReleases() {
   return (
     <section>
-      <h2 className={`text-zinc-800 text-3xl`}>New Releases</h2>
+      <h2 className={`text-white text-3xl`}>New Releases</h2>
 
       <div className={`mt-5 flex items-center gap-5`}>
         {Object.entries(moviesReleasesData).map(([key, movie]) => (

@@ -5,11 +5,15 @@ import { SectionNewReleases } from "../SectionNewReleases";
 export function Main() {
   return (
     <main>
-      <SectionMovieSpotlight />
+      <div className={`container-box`}>
+        <SectionMovieSpotlight />
+      </div>
 
-      <div className={`md:flex md:flex-col gap-[50px]`}>
-        <SectionCollections />
-        <SectionNewReleases />
+      <div className={`w-full`}>
+        <div className={`container-box md:flex md:flex-col gap-[50px]`}>
+          <SectionCollections />
+          <SectionNewReleases />
+        </div>
       </div>
     </main>
   );
