@@ -57,11 +57,28 @@ export function SectionCollections() {
 
       <div className={`mt-5 flex items-center gap-5`}>
         {Object.entries(collectionsMoviesData).map(([key, movie]) => (
-          <div key={key}>
+          <div
+            key={key}
+            className={`relative group cursor-pointer
+            hover:-translate-y-2 transition-all  
+          `}
+          >
             <figure>
               <img src={movie.image.source} alt={movie.image.alt} />
               <figcaption className="sr-only">{movie.title}</figcaption>
             </figure>
+
+            <div
+              className={`w-full p-5 flex flex-col gap-[15px] 
+              absolute invisible opacity-0 bottom-0 left-0 
+              backdrop-blur text-white
+              group-hover:visible group-hover:opacity-100 transition-all
+            `}
+            >
+              <strong className={`text-[28px] capitalize`}>
+                {movie.title}
+              </strong>
+            </div>
           </div>
         ))}
       </div>
